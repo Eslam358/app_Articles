@@ -44,11 +44,11 @@ const Page = () => {
 
     async function handelSend_(e: React.FormEvent) {
         e.preventDefault();
-        const validated = createArticleValidation.safeParse({title, description});
-            if (!validated.success) {
-                toast.error(validated.error.issues[0].message);
-                return;
-            }
+        const validated = createArticleValidation.safeParse({ title, description });
+        if (!validated.success) {
+            toast.error(validated.error.issues[0].message);
+            return;
+        }
         startTransition(
             async () => {
                 await addArticle(title as string, description as string);
@@ -61,7 +61,7 @@ const Page = () => {
 
     return (
         <>
-            <div className="  mt-20 ">
+            <div className=" ">
                 <div className="overflow-x-auto p-10 max-w-2xl rounded-lg  bg-violet-900  mx-auto ">
                     <h3 className='text-3xl text-center mb-5'>Add The Article</h3>
                     <form onSubmit={handelSend_} className='max-w-xl m-auto'>

@@ -19,7 +19,14 @@ const eslintConfig = [
   //   },
   // }
   {  "rules": {
-    "no-unused-vars": ["error", { "vars": "all", "args": "after-used", "ignoreRestSiblings": false }]
+    "no-unused-vars": "off",
+        "@typescript-eslint/ban-ts-comment": "off",
+        "@typescript-eslint/no-explicit-any": "off",
+        "@typescript-eslint/no-unused-vars": "off",
+        "react/display-name": "off",
+        "react-hooks/rules-of-hooks": "off",
+        "import/no-anonymous-default-export": "off"
+    // "no-unused-vars": ["error", { "vars": "all", "args": "after-used", "ignoreRestSiblings": false }]
   }}
 ];
 

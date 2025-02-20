@@ -1,41 +1,36 @@
 import React from 'react'
+import Image from 'next/image'
+import { TiTick } from "react-icons/ti";
 
-export default function 
+export default function
 
-() {
+  () {
   return (
     <>
-        <section className="">
-  <div className="mx-auto max-w-screen-xl px-4 py-32 lg:flex lg:h-screen lg:items-center">
-    <div className="mx-auto max-w-xl text-center">
-      <h1 className="text-3xl font-extrabold sm:text-5xl">
-        Understand User Flow.
-        <strong className="font-extrabold text-red-700 sm:block"> Increase Conversion. </strong>
-      </h1>
+      <section className="flex items-center justify-center gap-5 md:gap-10 flex-col lg:flex-row-reverse py-5 px-3 mt-12 ">
+      <Image src="/cloud-hosting.png" alt="  cloud-hosting " width={500} height={500} />
 
-      <p className="mt-4 sm:text-xl/relaxed">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt illo tenetur fuga ducimus
-        numquam ea!
-      </p>
-
-      <div className="mt-8 flex flex-wrap justify-center gap-4">
-        <a
-          className="block w-full rounded bg-red-600 px-12 py-3 text-sm font-medium text-white shadow hover:bg-red-700 focus:outline-none focus:ring active:bg-red-500 sm:w-auto"
-          href="#"
-        >
-          Get Started
-        </a>
-
-        <a
-          className="block w-full rounded px-12 py-3 text-sm font-medium text-red-600 shadow hover:text-red-700 focus:outline-none focus:ring active:text-red-500 sm:w-auto"
-          href="#"
-        >
-          Learn More
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
+      <div className="px-4">
+                <h1 className=" text-3xl  ">Cloud Hosting</h1>
+                <p className="text-xl  font-bold text-gray-400">
+                    The best web hosting solution for your online success
+                </p>
+                <div className="py-5 ">
+                    <div className="flex gap-3 py-1">
+                        <TiTick />  Easy To Use Control Panel
+                    </div>
+                    <div className="flex gap-3 py-1">
+                        <TiTick />  Secure Hosting
+                    </div>
+                    <div className="flex gap-3 py-1">
+                        <TiTick />  Website Maintenance
+                    </div>
+                </div>
+            </div>
+           
+         
+      
+      </section>
 
     </>
   )

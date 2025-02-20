@@ -113,7 +113,7 @@ const openUpdate = (title:string, description:string, id:number)=>{
                                     <MdDelete onClick={() => handleDelete(e.id)} className=' text-xl hover:text-red-700 inline mx-3 cursor-pointer' />
 
                                     
-                                    <RiEdit2Line onClick={()=> {setOpen(true), setTitle(e.title), setDescription(e.description),setId(e.id)}} className=' text-xl hover:text-blue-700 inline cursor-pointer' />
+                                    <RiEdit2Line onClick={()=> openUpdate(e.title,e.description,e.id)} className=' text-xl hover:text-blue-700 inline cursor-pointer' />
 
                                 </td>
                                 <td className="whitespace-nowrap px-4 py-2 text-gray-700 dark:text-gray-200">

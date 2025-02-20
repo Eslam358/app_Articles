@@ -27,13 +27,11 @@ export default function RootLayout({
     <html lang="en" className="dark">
       <body
         className={` antialiased dark:bg-gray-900 `}
-      // className={`${geistSans.variable} ${geistMono.variable} antialiased dark:bg-gray-900 `}
       >
         <Header />
-        {/* <h1>uuuuuuuuuuuuuuuuuuuuuuuuu</h1> */}
         {children}
         <ToastContainer />
-        {/* <Footer /> */}
+        <Footer />
       </body>
     </html>
   );

@@ -1,44 +1,44 @@
 "use client";
 import Image from "next/image";
-import { toast } from 'react-toastify';
 import { useState, useRef, useEffect } from "react";
 
 import { useRouter } from "next/navigation";
 import { deleteComment, updateComment } from "@/utils/allFunctions/allFunctions";
-let edit = false;
-let loading = false;
+
 export default function comments({ data, userinfo }: any) {
 
 
 
   const router = useRouter();
+  const [isEditing, setIsEditing] = useState(false);
+const [isLoading, setIsLoading] = useState(false);
   const [text, setText] = useState("");
   const inputRef = useRef<HTMLTextAreaElement>(null);
   const closeEdit = () => {
     setText("");
-    edit = false;
+    setIsEditing(false);
   };
   const openEdit = () => {
     setText(data.text);
-    edit = true;
+    setIsEditing(true);
   };
 
   useEffect(() => {
-    if (edit && inputRef.current) {
+    if (isEditing && inputRef.current) {
       inputRef.current.focus();
     }
-  }, [edit]);
+  }, [isEditing]);
 
   const handleKeyUp = async (e: React.KeyboardEvent<HTMLTextAreaElement>, id: any) => {
     if (e.key === "Enter") {
 
-      loading = true;
+    setIsLoading(true);
 
-      const response = await updateComment(text, id);
+      await updateComment(text, id);
 
       router.refresh();
-      loading = false;
-      edit = false;
+     setIsLoading(false);
+      setIsEditing(false);
     }
   };
 
@@ -83,7 +83,7 @@ export default function comments({ data, userinfo }: any) {
                 />
               </div>}
           </div>
-          {!edit ? (
+          {!isEditing ? (
             <p>{data.text}</p>
           ) : (
             <div className=" relative">
@@ -103,7 +103,7 @@ export default function comments({ data, userinfo }: any) {
                 onBlur={closeEdit}
                 className="bg-transparent w-full shadow-none overflow-hidden resize-none focus:outline-none focus:ring-0 "
                 value={text}
-                disabled={loading}
+                disabled={isLoading}
               />
             </div>
           )}

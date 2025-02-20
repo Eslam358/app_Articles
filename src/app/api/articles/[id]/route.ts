@@ -2,8 +2,6 @@ import { NextResponse, NextRequest } from "next/server";
 import { Article } from "@prisma/client";
 import prisma from "@/utils/prisma/db";
 import { testUserToken } from "@/utils/handelToken";
-import { error } from "console";
-//  get Article -----------------------------------------
 //  get Article -----------------------------------------
 type Params_id = Promise<{ id: string }>;
 

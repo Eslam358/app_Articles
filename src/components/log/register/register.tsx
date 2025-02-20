@@ -118,7 +118,7 @@ const register = () => {
                             </button>
 
                             <p className="mt-4 text-sm text-gray-200 sm:mt-0">
-                                Don't have an account?
+                                Don&apos;t have an account?
 
                                 <Link href="/register" className="text-gray-400 underline">
                                     Sign up now.

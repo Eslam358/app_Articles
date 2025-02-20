@@ -14,12 +14,12 @@ const Layout = async ({ children }: Readonly<{
 
 
     return (
-        <div className='flex container  mx-auto   max-w-screen-xl mt-5   px-4 sm:px-6 lg:px-8  '>
-            <div className=' w-40 sm:w-56 md:w-60  '>
+        <div className='flex container flex-col sm:flex-row  mx-auto   max-w-screen-xl mt-5   px-4 sm:px-6 lg:px-8  '>
+            <div className='w-full  sm:w-40 md:w-60  '>
 
                 <Ddd />
             </div>
-            <div className='flex-auto  '>
+            <div className='flex-auto mt-6 sm:mt-16 '>
 
                 {children}
 

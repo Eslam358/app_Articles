@@ -4,7 +4,7 @@ import React from "react";
 export default function () {
   return (
     <div>
-      <div className=" bg-gray-900">
+      <div className=" bg-gray-900 mt-40">
         <div className="max-w-2xl mx-auto text-white py-10">
           <div className="text-center">
             <h3 className="text-3xl mb-3"> Download our fitness app </h3>
@@ -13,6 +13,8 @@ export default function () {
               <div className="flex items-center border w-auto rounded-lg px-4 py-2 w-52 mx-2">
                 <Image
                   alt="Google Play Store"
+                  width={100}
+                  height={100}
                   src="https://cdn-icons-png.flaticon.com/512/888/888857.png"
                   className="w-7 md:w-8"
                 />
@@ -24,6 +26,8 @@ export default function () {
               <div className="flex items-center border w-auto rounded-lg px-4 py-2 w-44 mx-2">
                 <Image
                   alt="Google Play Store"
+                  width={100}
+                  height={100}
                   src="https://cdn-icons-png.flaticon.com/512/888/888841.png"
                   className="w-7 md:w-8"
                 />
