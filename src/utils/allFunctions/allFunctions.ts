@@ -1,4 +1,5 @@
 import { error } from 'console';
+import { BASE_URL } from "@/utils/axiosCreat"
 
 import axios from "axios";
 import axiosCreate from "@/utils/axiosCreat";
@@ -86,7 +87,7 @@ export const createUser = async (formJson: {
 }): Promise<any> => {
   try {
     const response = await axios.post(
-      "http://localhost:3000/api/user/register",
+      `${BASE_URL}/api/user/register`,
       formJson
     );
     if (response.status === 201) {
@@ -108,7 +109,7 @@ export const createUser = async (formJson: {
 export const logOutUser = async (): Promise<any> => {
   try {
     const response = await axios.get(
-      "http://localhost:3000/api/user/logout"
+      `${BASE_URL}/api/user/logout`
 
     );
     if (response.status === 200) {
@@ -132,7 +133,7 @@ export const logInUser = async (formJson: {
 }): Promise<any> => {
   try {
     const response = await axios.post(
-      "http://localhost:3000/api/user/sigin",
+      `${BASE_URL}/api/user/sigin`,
       formJson
     );
     if (response.status === 200) {
