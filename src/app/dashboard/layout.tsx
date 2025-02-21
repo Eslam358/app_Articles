@@ -1,5 +1,5 @@
 import React from 'react';
-import Ddd from '@/components/dashboard/ddd';
+import NavDash from '@/components/dashboard/navDash';
 import { getUser } from "@/utils/allFunctions/testUser"
 
 import { redirect } from 'next/navigation'
@@ -17,7 +17,7 @@ const Layout = async ({ children }: Readonly<{
         <div className='flex container flex-col sm:flex-row  mx-auto   max-w-screen-xl mt-5   px-4 sm:px-6 lg:px-8  '>
             <div className='w-full  sm:w-40 md:w-60  '>
 
-                <Ddd />
+                <NavDash />
             </div>
             <div className='flex-auto mt-6 sm:mt-16 '>
 
